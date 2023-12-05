@@ -11886,11 +11886,11 @@ span.select2-selection.select2-selection--single:focus {
   margin-top: 20px;
 }
 .service-page-single .service-page-list li {
-  color: var(--white-color);
+  color: var(--black-color);
   margin-bottom: 10px;
 }
 .service-page-single .service-page-list li i {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 .service-page-single .service-page-list li:last-child {
   margin-bottom: 0;
