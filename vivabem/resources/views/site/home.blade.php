@@ -231,7 +231,7 @@ Hero Area
                             <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s">Strength</h1>
                             <span class="hero-subtitle fw-semibold" data-ani="slideinup" data-ani-delay="0.2s">WITH Fitmas</span>
                             <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
-                                <a href="contact.html" class="btn style-r0 style2">Make Appointment</a>
+                                <a href="{{ url('/contato') }}" class="btn style-r0 style2">Marque uma consulta</a>
                             </div>
                         </div>
                     </div>

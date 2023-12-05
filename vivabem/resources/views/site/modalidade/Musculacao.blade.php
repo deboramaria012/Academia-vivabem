@@ -4,7 +4,7 @@
 
 
 
-<link rel="stylesheet" href="{{ asset ('assets/css/style.css') }}">
+ <link rel="stylesheet" href="{{ asset ('assets/css/style.css') }}">
  <link rel="stylesheet" href="{{ asset ('assets/css/bootstrap.min.css') }}">
  <link rel="stylesheet" href="{{ asset ('assets/css/jquery.flipster.min.css') }}">
  <link rel="stylesheet" href="{{ asset ('assets/css/slick.min.css') }}">

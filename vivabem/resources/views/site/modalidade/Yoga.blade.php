@@ -22,7 +22,7 @@
                     <a href="#">Home</a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{{ url('/') }}">Home</a>
                         </li>
                         <li>
                     </ul>
@@ -30,25 +30,48 @@
 
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="#">Project</a>
-                    <ul class="sub-menu">
-                        <li><a href="project.html">Projects</a></li>
-                        <li><a href="project-details.html">Project Details</a></li>
+                    <li>
+                        <a href="{{ url ('/sobre') }}">Sobre</a>
+                    </li>
                     </ul>
+
+                    <li class="menu-item-has-children">
+                        <a href="{{ url('/modalidade') }}">Modalidade</a>
+                        <ul class="sub-menu">
+                      <li><a href="{{ url('/modalidade/musculacao') }}">Musculação</a></li>
+
+                      <li><a href="{{ url('/modalidade/aerobica') }}">Aeróbica</a></li>
+
+                      <li><a href="{{ url('/modalidade/pilates') }}">Pilates</a></li>
+
+                      <li><a href="{{ url('/modalidade/yoga') }}">Yoga</a></li>
+
+                      <li><a href="{{ url('/modalidade/treinamentofuncional') }}">treinamento funcional</a></li>
+
+                    </ul>
+                  </li>
+
                 </li>
-                <li class="menu-item-has-children">
+                    <li class="menu-item-has-children">
                     <a href="#">Service</a>
                     <ul class="sub-menu">
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="service-details.html">Service Details</a></li>
-                    </ul>
+                    <li><a href="service.html">Service</a></li>
+                     <li><a href="service-details.html">Service Details</a></li>
+                 </ul>
                 </li>
-                <li class="menu-item-has-children">
-                    <a href="#">Blog</a>
+
+                      <li class="menu-item-has-children">
+                     <a href="{{ url('/treino')}}">Treino</a>
                     <ul class="sub-menu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-2.html">Blog 02</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
+                     <li><a href="{{ url('/treino') }}">Treino</a></li>
+                    </ul>
+                  </li>
+
+
+                     <li class="menu-item-has-children">
+                    <a href="{{ url('/noticias') }}">Noticias</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ url('/noticias') }}">Noticias</a></li>
                     </ul>
                 </li>
                 <li>
