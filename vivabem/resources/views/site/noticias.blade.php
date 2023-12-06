@@ -212,37 +212,43 @@ Blog Area
                             <a href="blog.html"><i class="far fa-clock"></i> 25 June, 2023</a>
                             <a href="blog.html"><i class="far fa-user"></i>Post by: Admin</a>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Most Traditional Gym Fitness Blog 2023</a></h3>
+                        <h3 class="blog-title"><a href="blog-details.html">Blog de fitness da academia </a></h3>
                         <p>Passion is the driving force behind our gym team members. They have a genuine love for fitness and a deep-rooted desire to inspire and motivate others. Their contagious enthusiasm creates a positive and energizing atmosphere within our gym</p>
-                        <a href="blog-details.html" class="link-btn style2"><i class="fas fa-arrow-right"></i> READ MORE</a>
+                        <a href="blog-details.html" class="link-btn style2"><i class="fas fa-arrow-right"></i> CONSULTE MAIS INFORMAÇÃO</a>
                     </div>
                 </div>
                 <div class="blog-card style4">
                     <div class="blog-img">
-                        <img src="assets/img/blog/blog_s1_2.png" alt="blog image">
+                        <img src="{{ asset('assets/img/treino..png') }}" alt="blog image">
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <a href="blog.html"><i class="far fa-clock"></i> 25 June, 2023</a>
                             <a href="blog.html"><i class="far fa-user"></i>Post by: Admin</a>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Strategies for Maximizing Your Workouts</a></h3>
-                        <p>Passion is the driving force behind our gym team members. They have a genuine love for fitness and a deep-rooted desire to inspire and motivate others. Their contagious enthusiasm creates a positive and energizing atmosphere within our gym</p>
-                        <a href="blog-details.html" class="link-btn style2"><i class="fas fa-arrow-right"></i> READ MORE</a>
+                        <h3 class="blog-title"><a href="blog-details.html">Estratégias para maximizar seus treinos</a></h3>
+                        <p>Defina metas específicas e mensuráveis para orientar seu progresso. Metas claras fornecem um propósito tangível, mantendo você focado e motivado.
+                            Desenvolva um plano de treino abrangente que inclua exercícios de força, resistência cardiovascular, flexibilidade e equilíbrio. A diversidade mantém os treinos interessantes e desafia o corpo de várias maneiras.
+                            Evite a estagnação incorporando variedade em sua rotina. Introduza novos exercícios e métodos de treino para desafiar diferentes grupos musculares e evitar o tédio.
+                        </p>
+                        <a href="blog-details.html" class="link-btn style2"><i class="fas fa-arrow-right"></i> CONSULTE MAIS INFORMAÇÃO</a>
                     </div>
                 </div>
                 <div class="blog-card style4">
                     <div class="blog-img">
-                        <img src="assets/img/blog/blog_s1_3.png" alt="blog image">
+                        <img src="{{ asset('assets/img/nutrição.png') }}" alt="blog image">
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <a href="blog.html"><i class="far fa-clock"></i> 25 June, 2023</a>
                             <a href="blog.html"><i class="far fa-user"></i>Post by: Admin</a>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Nutrition Tips and Advice for Gym Goers</a></h3>
-                        <p>Passion is the driving force behind our gym team members. They have a genuine love for fitness and a deep-rooted desire to inspire and motivate others. Their contagious enthusiasm creates a positive and energizing atmosphere within our gym</p>
-                        <a href="blog-details.html" class="link-btn style2"><i class="fas fa-arrow-right"></i> READ MORE</a>
+                        <h3 class="blog-title"><a href="blog-details.html">Conselhos sobre dicas de nutrição para frequentadores de academia</a></h3>
+                        <p>Beba água ao longo do dia para garantir uma hidratação adequada.
+                            Cerca de 1-2 horas antes do treino, consuma de 400 a 600 ml de água.
+                            Inclua carboidratos complexos (aveia, arroz integral) e proteínas magras (frango, peixe) para fornecer energia sustentada.
+                            Evite refeições muito pesadas para evitar desconforto durante o exercício.</p>
+                        <a href="blog-details.html" class="link-btn style2"><i class="fas fa-arrow-right"></i>CONSULTE MAIS INFORMAÇÃO</a>
                     </div>
                 </div>
                 <div class="pagination">
@@ -265,14 +271,14 @@ Blog Area
                     </div>
 
                     <div class="widget">
-                        <h3 class="widget_title">Recent Posts</h3>
+                        <h3 class="widget_title">Postagens recentes</h3>
                         <div class="recent-post-wrap">
                             <div class="recent-post">
                                 <div class="media-img">
                                     <a href="blog-details.html"><img src="assets/img/blog/recent-post1.png" alt="Blog Image"></a>
                                 </div>
                                 <div class="media-body">
-                                    <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Essential Strategies for Maximizing Your</a></h4>
+                                    <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Estratégias essenciais para maximizar seu</a></h4>
                                     <div class="recent-post-meta">
                                         <a href="blog.html">25 Jun, 2023</a>
                                     </div>
@@ -283,8 +289,7 @@ Blog Area
                                     <a href="blog-details.html"><img src="assets/img/blog/recent-post2.png" alt="Blog Image"></a>
                                 </div>
                                 <div class="media-body">
-                                    <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Functional training into
-                                        your Routine...</a></h4>
+                                    <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Treinamento funcional em  sua rotina...</a></h4>
                                     <div class="recent-post-meta">
                                         <a href="blog.html">25 Jun, 2023</a>
                                     </div>
@@ -295,7 +300,7 @@ Blog Area
                                     <a href="blog-details.html"><img src="assets/img/blog/recent-post3.png" alt="Blog Image"></a>
                                 </div>
                                 <div class="media-body">
-                                    <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Nutrition Tips Advice for Gym Goers</a></h4>
+                                    <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Conselhos sobre dicas de nutrição para frequentadores de academia</a></h4>
                                     <div class="recent-post-meta">
                                         <a href="blog.html">25 Jun, 2023</a>
                                     </div>
@@ -308,37 +313,37 @@ Blog Area
                         <h3 class="widget_title">Categories</h3>
                         <ul>
                             <li>
-                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>Boxing Training</a>
+                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>Treinamento de boxe</a>
                             </li>
                             <li>
-                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>Body Building Class</a>
+                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>Aula de musculação</a>
                             </li>
                             <li>
-                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>Meditation Class</a>
+                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>Aula de Meditação</a>
                             </li>
                             <li>
-                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>Mental Yoga Training</a>
+                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>Treinamento de ioga mental</a>
                             </li>
                             <li>
-                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>CrossFit Body Class</a>
+                                <a href="blog.html"><i class="fa-solid fa-arrow-right"></i>Classe Corporal CrossFit</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="widget widget_gallery">
-                        <h3 class="widget_title">Project Gallery</h3>
+                        <h3 class="widget_title">Galleria</h3>
                         <div class="insta-feed">
-                            <a href="blog.html"><img src="assets/img/widget/widget1-1.png" alt="img">
+                            <a href="blog.html"><img src="{{ asset('assets/img/widget/widget1-1.png') }}" alt="img">
                             <i class="fab fa-instagram"></i></a>
-                            <a href="blog.html"><img src="assets/img/widget/widget1-2.png" alt="img">
+                            <a href="blog.html"><img src="{{ asset('assets/img/widget/widget1-2.png') }}" alt="img">
                             <i class="fab fa-instagram"></i></a>
-                            <a href="blog.html"><img src="assets/img/widget/widget1-3.png" alt="img">
+                            <a href="blog.html"><img src="{{ asset('assets/img/widget/widget1-3.png') }}" alt="img">
                             <i class="fab fa-instagram"></i></a>
-                            <a href="blog.html"><img src="assets/img/widget/widget1-4.png" alt="img">
+                            <a href="blog.html"><img src="{{ asset('assets/img/widget/widget1-4.png') }}" alt="img">
                             <i class="fab fa-instagram"></i></a>
-                            <a href="blog.html"><img src="assets/img/widget/widget1-5.png" alt="img">
+                            <a href="blog.html"><img src="{{ asset('assets/img/widget/widget1-5.png') }}" alt="img">
                             <i class="fab fa-instagram"></i></a>
-                            <a href="blog.html"><img src="assets/img/widget/widget1-6.png" alt="img">
+                            <a href="blog.html"><img src="{{ asset('assets/img/widget/widget1-6.png') }}" alt="img">
                                 <i class="fab fa-instagram"></i></a>
                         </div>
                     </div>

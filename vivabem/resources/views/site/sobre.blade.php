@@ -362,7 +362,7 @@ Service Area 02
 <!--==============================
 Cta Area
 ==============================-->
-<section class="cta-area space" data-bg-src="assets/img/bg/cta-bg1.png">
+<section class="cta-area space" data-bg-src="{{ asset('assets/img/sobre.png') }}">
     <div class="container">
         <div class="row justify-content-lg-end justify-content-center">
             <div class="col-xl-6 col-lg-8 col-md-10">
@@ -401,7 +401,7 @@ Team Area
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
                     <div class="team-card_img">
-                        <img src="assets/img/team/team-1.png" alt="img">
+                        <img src="{{ asset('assets/img/treinador2.png') }}" alt="img">
                     </div>
                     <div class="team-card_content">
                         <h4 class="team-card_title"><a href="team-details.html">George Thomas</a>
@@ -418,7 +418,7 @@ Team Area
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
                     <div class="team-card_img">
-                        <img src="assets/img/team/team-2.png" alt="img">
+                        <img src="{{ asset('assets/img/treinador3.png') }}" alt="img">
                     </div>
                     <div class="team-card_content">
                         <h4 class="team-card_title"><a href="team-details.html">Mike Johnson</a>
@@ -435,7 +435,7 @@ Team Area
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
                     <div class="team-card_img">
-                        <img src="assets/img/team/team-3.png" alt="img">
+                        <img src="{{ asset('assets/img/treinadora.png') }}" alt="img">
                     </div>
                     <div class="team-card_content">
                         <h4 class="team-card_title"><a href="team-details.html">Amelia Harper</a>
@@ -452,7 +452,7 @@ Team Area
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
                     <div class="team-card_img">
-                        <img src="assets/img/team/team-4.png" alt="img">
+                        <img src="{{ asset ('assets/img/treinador.png') }}" alt="img">
                     </div>
                     <div class="team-card_content">
                         <h4 class="team-card_title"><a href="team-details.html">Oliver Samuel</a>
@@ -469,7 +469,7 @@ Team Area
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
                     <div class="team-card_img">
-                        <img src="assets/img/team/team-1.png" alt="img">
+                        <img src="{{ asset('assets/img/treinador2.png') }}" alt="img">
                     </div>
                     <div class="team-card_content">
                         <h4 class="team-card_title"><a href="team-details.html">George Thomas</a>
@@ -486,7 +486,7 @@ Team Area
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
                     <div class="team-card_img">
-                        <img src="assets/img/team/team-2.png" alt="img">
+                        <img src="{{ asset ('assets/img/treinador3.png') }}" alt="img">
                     </div>
                     <div class="team-card_content">
                         <h4 class="team-card_title"><a href="team-details.html">Mike Johnson</a>
@@ -503,7 +503,7 @@ Team Area
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
                     <div class="team-card_img">
-                        <img src="assets/img/team/team-3.png" alt="img">
+                        <img src="{{ asset('assets/img/treinadora.png') }}" alt="img">
                     </div>
                     <div class="team-card_content">
                         <h4 class="team-card_title"><a href="team-details.html">Amelia Harper</a>
@@ -520,7 +520,7 @@ Team Area
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
                     <div class="team-card_img">
-                        <img src="assets/img/team/team-4.png" alt="img">
+                        <img src="{{ asset('assets/img/treinador.png') }}" alt="img">
                     </div>
                     <div class="team-card_content">
                         <h4 class="team-card_title"><a href="team-details.html">Oliver Samuel</a>

@@ -256,7 +256,7 @@ Hero Area
                             <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s">Strength</h1>
                             <span class="hero-subtitle fw-semibold" data-ani="slideinup" data-ani-delay="0.2s">WITH Fitmas</span>
                             <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
-                                <a href="contact.html" class="btn style-r0 style2">Make Appointment</a>
+                                <a href="{{ url('/contato') }}" class="btn style-r0 style2">Make Appointment</a>
                             </div>
                         </div>
                     </div>
@@ -275,6 +275,9 @@ Hero Area
 Service Area
 ==============================-->
 <div class="service-bg2-area" data-bg-src="{{asset('assets/img/bg/service-bg2.png') }}">
+    <div class="sec-shape-top">
+    <img src="assets/img/bg/sec-shape-top.png" alt="img">
+    </div>
     <!--==============================
     BMI Area
     ==============================-->
@@ -1611,7 +1614,13 @@ Cta Area
 
 <div class="service-area-2 space overflow-hidden">
     <div class="container">
-        <div class="row gy-4">
+        <div class="title-area text-center">
+            <span class="sub-title">Our Services</span>
+            <h2 class="sec-title">Service We Provide</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row global-carousel service-slider-2 slider-shadow" data-slide-show="3" data-ml-slide-show="3" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="1" data-xs-slide-show="1" data-dots="false">
             <div class="col-lg-4 col-md-6">
                 <div class="service-card style2">
                     <div class="service-card_icon">
@@ -1654,7 +1663,7 @@ Cta Area
             <div class="col-lg-4 col-md-6">
                 <div class="service-card style2">
                     <div class="service-card_icon">
-                        <img src="assets/img/icon/service-icon_2-4.svg" alt="img">
+                        <img src="assets/img/icon/service-icon_2-1.svg" alt="img">
                     </div>
                     <div class="service-card_content">
                         <h4 class="service-card_title h5"><a href="service-details.html">Boxing Class</a></h4>
@@ -1667,10 +1676,10 @@ Cta Area
             <div class="col-lg-4 col-md-6">
                 <div class="service-card style2">
                     <div class="service-card_icon">
-                        <img src="assets/img/icon/service-icon_2-5.svg" alt="img">
+                        <img src="assets/img/icon/service-icon_2-2.svg" alt="img">
                     </div>
                     <div class="service-card_content">
-                        <h4 class="service-card_title h5"><a href="service-details.html">Yoga Fitness Class</a></h4>
+                        <h4 class="service-card_title h5"><a href="service-details.html">Power Lifting</a></h4>
                         <p class="service-card_text">High-intensity workouts that alternate between intense bursts of exercise and
                             short recovery periods...</p>
                         <a href="service-details.html" class="link-btn" tabindex="0"><i class="fas fa-arrow-right"></i> Read More</a>
@@ -1680,10 +1689,10 @@ Cta Area
             <div class="col-lg-4 col-md-6">
                 <div class="service-card style2">
                     <div class="service-card_icon">
-                        <img src="assets/img/icon/service-icon_2-6.svg" alt="img">
+                        <img src="assets/img/icon/service-icon_2-3.svg" alt="img">
                     </div>
                     <div class="service-card_content">
-                        <h4 class="service-card_title h5"><a href="service-details.html">Meditation Class</a></h4>
+                        <h4 class="service-card_title h5"><a href="service-details.html">Yoga Fitness Class</a></h4>
                         <p class="service-card_text">High-intensity workouts that alternate between intense bursts of exercise and
                             short recovery periods...</p>
                         <a href="service-details.html" class="link-btn" tabindex="0"><i class="fas fa-arrow-right"></i> Read More</a>
