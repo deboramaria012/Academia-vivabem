@@ -1,8 +1,7 @@
 
-@extends('layout.layout');
+@extends('layout.layout')
 
 @section('title','treino')
-
 
 @section('conteudo')
 

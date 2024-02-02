@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\ContatoDoController;
 use App\Http\Controllers\HomeDoController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ModalidadeDoController;
 use App\Http\Controllers\NoticiasDoController;
 use App\Http\Controllers\NoticiasoDoController;
@@ -32,4 +34,19 @@ Route::get('/modalidade/pilates',[ModalidadeDoController::class,'pilates'])->nam
 Route::get('/modalidade/yoga',[ModalidadeDoController::class,'yoga'])->name('modalidade.yoga');
 Route::get('/modalidade/Treinamentofuncional',[ModalidadeDoController::class ,'Treinamentofuncional'])->name('modalidade.treinamentofuncional');
 Route::get('/treino',[TreinoDoController::class,'index'])->name('treino'); // Página "Treino"
+
+
+Route::get('/login',[LoginController::class,'index'])->name('login');
+route::post('/login', [LoginController::class, 'autenticar'])->name('login');
+
+
+Route::get('/dashboard/aluno/aluno',[AlunoController::class,'aluno'])->name('dashboard.aluno');
+Route::get('/dashboard/instrutor/instrutor',[AlunoController::class,'instrutor'])->name('dashboard.instrutor');
+Route::get('/dashboard/administrador/administrador',[AlunoController::class,'administrador'])->name('dashboard.administrativo');
+
+
 Route::get('/contato',[ContatoDoController::class, 'index'])->name('contato'); // Página Contato"
+Route::post('contato/enviar',[ContatoDoController::class, 'salvarNoBanco'])->name('contato.enviar');
+Route::post('/contato/enviarNew',[ContatoDoController::class, 'salvarEmail'])->name('contato.enviarNew');
+
+

@@ -1,212 +1,10 @@
 
-@extends('layout.layout');
+@extends('layout.layout')
 
 @section('title','home')
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
+@section('conteudo')
 
-
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title> @yield('title') Academia VivaBem</title>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
-        <meta name="turbo-visit-control" content="reload">
-
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=Kumbh+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-      <link rel="stylesheet" href="{{ asset ('assets/css/style.css') }}">
-      <link rel="stylesheet" href="{{ asset ('assets/css/bootstrap.min.css') }}">
-      <link rel="stylesheet" href="{{ asset ('assets/css/jquery.flipster.min.css') }}">
-      <link rel="stylesheet" href="{{ asset ('assets/css/slick.min.css') }}">
-      <link rel="stylesheet" href="{{ asset ('assets/css/magnific-popup.min.css') }}">
-      <link rel="stylesheet" href="{{ asset ('assets/css/fontawesome.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('assets/css/nice-select.min.css') }}">
-
-    </head>
-
-<body>
-
-<div class="mobile-menu-wrapper">
-    <div class="mobile-menu-area text-center">
-        <button class="menu-toggle"><i class="fal fa-times"></i></button>
-        <div class="mobile-logo">
-            <a href="index.html"><img src="{{ asset('assets/img/logoVivaBem.svg') }}" alt="logo vivabem"></a>
-        </div>
-        <div class="mobile-menu">
-            <ul>
-                <li class="menu-item-has-children">
-                    <a href="#">Home</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                    </ul>
-                </li>
-
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">Project</a>
-                    <ul class="sub-menu">
-                        <li><a href="project.html">Projects</a></li>
-                        <li><a href="project-details.html">Project Details</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">Service</a>
-                    <ul class="sub-menu">
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="service-details.html">Service Details</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">Blog</a>
-                    <ul class="sub-menu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-2.html">Blog 02</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="{{ url('/contato') }}">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--==============================
-Header Area
-==============================-->
-<header class="nav-header header-layout2">
-    <div class="header-top d-lg-block d-none">
-        <div class="container-fluid">
-            <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
-                <div class="col-auto d-none d-lg-block">
-                    <div class="header-links">
-                        <ul>
-                            <li><i class="far fa-envelope"></i><a href="mailto:info@gmail.com">support@gmail.com</a></li>
-                            <li><i class="far fa-clock"></i>Mon - Sat: 8.00 am-7.00 pm</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="header-links">
-                        <ul>
-                            <li>
-                                <div class="social-links">
-                                    <span class="me-3">Visite nossas páginas sociais</span>
-                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="sticky-wrapper">
-        <!-- Main Menu Area -->
-        <div class="menu-area">
-            <div class="container-fluid">
-                <div class="row align-items-center justify-content-lg-start justify-content-between">
-                    <div class="col-auto">
-                        <div class="header-logo">
-                         <a href="index.html"><img src= "{{ asset ('assets/img/logovivabem.png') }}" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-auto m-lg-auto">
-                        <nav class="main-menu d-none d-lg-inline-block">
-                            <ul>
-
-                                <li class="menu-item-has-children">
-                                    <a href="#">Home</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="{{ url('/') }}">Home</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="{{ url ('/sobre') }}">Sobre</a>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="#">Service</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="service.html">Service</a></li>
-                                        <li><a href="service-details.html">Service Details</a></li>
-                                    </ul>
-                                </li>
-
-                               <li class="menu-item-has-children">
-                                <a href="{{ url('/modalidade') }}">Modalidade</a>
-                                <ul class="sub-menu">
-                              <li><a href="{{ url('/modalidade/musculacao') }}">Musculação</a></li>
-
-                              <li><a href="{{ url('/modalidade/aerobica') }}">Aeróbica</a></li>
-
-                              <li><a href="{{ url('/modalidade/pilates') }}">Pilates</a></li>
-
-                              <li><a href="{{ url('/modalidade/yoga') }}">Yoga</a></li>
-
-                              <li><a href="{{ url('/modalidade/treinamentofuncional') }}">treinamento funcional</a></li>
-
-                            </ul>
-                          </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="{{ url('/treino')}}">Treino</a>
-                                    <ul class="sub-menu">
-                                     <li><a href="{{ url('/treino') }}">Treino</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="{{ url('/noticias') }}">Noticias</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="{{ url('/noticias') }}">Noticias</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="{{ url('/contato') }}">Contato</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="navbar-right d-inline-flex d-lg-none">
-                            <button type="button" class="menu-toggle icon-btn"><i class="far fa-bars"></i></button>
-                        </div>
-                    </div>
-                    <div class="col-auto d-xxl-block d-none">
-                        <div class="navbar-right-desc">
-                            <i class="fas fa-phone-volume"></i><a href="tel:+2590256215">+259 (0) 256 215</a>
-                        </div>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <div class="header-button">
-                            <a href="contact.html" class="btn style2 style-r0 d-xl-block d-none">
-                                Get a Quote
-                            </a>
-                            <button type="button" class="btn style-r0 btn-border3 sideMenuToggler">
-                                <i class="far fa-bars"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 
 <!--==============================
 Hero Area
@@ -1200,6 +998,7 @@ Portfolio Area
 ==============================-->
 <div class="portfolio-area-1" data-bg-src="{{ asset ('assets/img/bg/portfolio-bg-1.png')}}">
 
+
     <div class="container">
         <div class="title-area text-center">
             <span class="sub-title">Nosso portfólio</span>
@@ -1341,188 +1140,153 @@ wcu area
 <!--==============================
     wcu area 02 end
 ==============================-->
-
-<div class="bg-img-sec" data-bg-src="{{ asset('assets/img/bg/team-bg-2.png') }}">
-    <!--==============================
-    team area 02
-    ==============================-->
-    <div class="team-area-2 space overflow-hidden">
-        <div class="container container2">
-            <div class="title-area text-center text-sm-start">
-                <span class="sub-title">Nossos membros</span>
-                <h2 class="sec-title text-white fw-semibold"> CONHEÇA SEU TREINADOR</h2>
-            </div>
+<div class="team-area-1 space">
+    <div class="container">
+        <div class="title-area text-center">
+            <span class="sub-title">Nosso treinador</span>
+            <h2 class="sec-title">Conheça nossa incrível equipe</h2>
         </div>
-        <div class="container-fluid p-0">
-            <div class="row global-carousel team-slider-2" data-slide-show="4" data-ml-slide-show="3" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="1" data-xs-slide-show="1" data-dots="false">
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card2">
-                        <div class="team-card_img">
-                            <img src="{{ asset('assets/img/team/team-2-1.png') }}" alt="img">
-                        </div>
-                        <div class="team-card_content">
-                            <span class="team-card_subtitle">TREINADOR DE IOGA</span>
-                            <h4 class="team-card_title h5"><a href="team-details.html">George Edward</a></h4>
-                            <a href="tel:2588642236" class="link-btn" tabindex="0"><i class="fas fa-phone-volume me-2"></i>+258 8642 236</a>
-                        </div>
+        <div class="row global-carousel team-slider-1 slider-shadow" data-slide-show="4" data-ml-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="1" data-xs-slide-show="1" data-center-mode="true">
+            <div class="col-lg-4 col-md-6">
+                <div class="team-card">
+                    <div class="team-card_img">
+                        <img src="{{ asset('assets/img/treinador2.png') }}" alt="img">
                     </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card2">
-                        <div class="team-card_img">
-                            <img src="{{ asset('assets/img/team/team-2-2.png') }}" alt="img">
-                        </div>
-                        <div class="team-card_content">
-                            <span class="team-card_subtitle">TREINADOR DE IOGA</span>
-                            <h4 class="team-card_title h5"><a href="team-details.html">William Henry</a></h4>
-                            <a href="tel:2588642236" class="link-btn" tabindex="0"><i class="fas fa-phone-volume me-2"></i>+258 8642 236</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card2">
-                        <div class="team-card_img">
-                            <img src="{{ asset('assets/img/team/team-2-3.png') }}" alt="img">
-                        </div>
-                        <div class="team-card_content">
-                            <span class="team-card_subtitle">TREINADOR DE IOGA</span>
-                            <h4 class="team-card_title h5"><a href="team-details.html">Harper Victoria</a></h4>
-                            <a href="tel:2588642236" class="link-btn" tabindex="0"><i class="fas fa-phone-volume me-2"></i>+258 8642 236</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card2">
-                        <div class="team-card_img">
-                            <img src="{{ asset('assets/img/team/team-2-4.png') }}" alt="img">
-                        </div>
-                        <div class="team-card_content">
-                            <span class="team-card_subtitle">TREINADOR DE IOGA</span>
-                            <h4 class="team-card_title h5"><a href="team-details.html">Matthew Thomas</a></h4>
-                            <a href="tel:2588642236" class="link-btn" tabindex="0"><i class="fas fa-phone-volume me-2"></i>+258 8642 236</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card2">
-                        <div class="team-card_img">
-                            <img src="{{ asset('assets/img/team/team-2-1.png') }}" alt="img">
-                        </div>
-                        <div class="team-card_content">
-                            <span class="team-card_subtitle">TREINADOR DE IOGA</span>
-                            <h4 class="team-card_title h5"><a href="team-details.html">George Edward</a></h4>
-                            <a href="tel:2588642236" class="link-btn" tabindex="0"><i class="fas fa-phone-volume me-2"></i>+258 8642 236</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card2">
-                        <div class="team-card_img">
-                            <img src="{{ asset('assets/img/team/team-2-2.png') }}" alt="img">
-                        </div>
-                        <div class="team-card_content">
-                            <span class="team-card_subtitle">TREINADOR DE IOGA</span>
-                            <h4 class="team-card_title h5"><a href="team-details.html">William Henry</a></h4>
-                            <a href="tel:2588642236" class="link-btn" tabindex="0"><i class="fas fa-phone-volume me-2"></i>+258 8642 236</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card2">
-                        <div class="team-card_img">
-                            <img src="{{ asset ('assets/img/team/team-2-3.png') }}" alt="img">
-                        </div>
-                        <div class="team-card_content">
-                            <span class="team-card_subtitle">TREINADOR DE IOGA</span>
-                            <h4 class="team-card_title h5"><a href="team-details.html">Harper Victoria</a></h4>
-                            <a href="tel:2588642236" class="link-btn" tabindex="0"><i class="fas fa-phone-volume me-2"></i>+258 8642 236</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card2">
-                        <div class="team-card_img">
-                            <img src="{{asset ('assets/img/team/team-2-4.png') }}" alt="img">
-                        </div>
-                        <div class="team-card_content">
-                            <span class="team-card_subtitle">TREINADOR DE IOGA</span>
-                            <h4 class="team-card_title h5"><a href="team-details.html">Matthew Thomas</a></h4>
-                            <a href="tel:2588642236" class="link-btn" tabindex="0"><i class="fas fa-phone-volume me-2"></i>+258 8642 236</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!--==============================
-    Counter Area
-    ==============================-->
-    <div class="counter-area-2 overflow-hidden">
-        <div class="container container2">
-            <div class="row justify-content-between">
-                <div class="col-sm-6 col-xl-auto counter-card_wrap">
-                    <div class="counter-card style2">
-                        <div class="counter-card_icon">
-                            <img src="{{ asset('assets/img/icon/counter-icon_2-1.svg') }}" alt="icon">
-                        </div>
-                        <div class="media-body">
-                            <h2 class="counter-card_number"><span class="counter-number">3658</span>+</h2>
-                            <p class="counter-card_text">Clientes satisfeitos</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-auto counter-card_wrap">
-                    <div class="counter-card style2">
-                        <div class="counter-card_icon">
-                            <img src="{{ asset('assets/img/icon/counter-icon_2-2.svg') }}" alt="icon">
-                        </div>
-                        <div class="media-body">
-                            <h2 class="counter-card_number"><span class="counter-number">658</span>+</h2>
-                            <p class="counter-card_text">Membros Especialistas</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-auto counter-card_wrap">
-                    <div class="counter-card style2">
-                        <div class="counter-card_icon">
-                            <img src="{{asset('assets/img/icon/counter-icon_2-3.svg')}} " alt="icon">
-                        </div>
-                        <div class="media-body">
-                            <h2 class="counter-card_number"><span class="counter-number">368</span>+</h2>
-                            <p class="counter-card_text">Equipamento moderno</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-auto counter-card_wrap">
-                    <div class="counter-card style2">
-                        <div class="counter-card_icon">
-                            <img src="{{ asset('assets/img/icon/counter-icon_2-4.svg') }}" alt="icon">
-                        </div>
-                        <div class="media-body">
-                            <h2 class="counter-card_number"><span class="counter-number">153</span>+</h2>
-                            <p class="counter-card_text"> Tons Of Harvest</p>
+                    <div class="team-card_content">
+                        <h4 class="team-card_title"><a href="team-details.html">George Thomas</a>
+                        </h4>
+                        <span class="team-card_desig">CEO/Founder</span>
+                        <div class="social-btn">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.discord.com/"><i class="fab fa-discord"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="ad-slider">
-        <div class="global-carousel" data-autoplay-speed="1" data-speed="10000">
-            <h2 class="ad-slider_title">Fitmas <span>FITNESS</span> CENTER </h2>
-            <h2 class="ad-slider_title">Fitmas <span>FITNESS</span> CENTER </h2>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-card">
+                    <div class="team-card_img">
+                        <img src="{{ asset('assets/img/treinador3.png') }}" alt="img">
+                    </div>
+                    <div class="team-card_content">
+                        <h4 class="team-card_title"><a href="team-details.html">Mike Johnson</a>
+                        </h4>
+                        <span class="team-card_desig">CEO/Founder</span>
+                        <div class="social-btn">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.discord.com/"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-card">
+                    <div class="team-card_img">
+                        <img src="{{ asset('assets/img/treinadora.png') }}" alt="img">
+                    </div>
+                    <div class="team-card_content">
+                        <h4 class="team-card_title"><a href="team-details.html">Amelia Harper</a>
+                        </h4>
+                        <span class="team-card_desig">CEO/Founder</span>
+                        <div class="social-btn">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.discord.com/"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-card">
+                    <div class="team-card_img">
+                        <img src="{{ asset ('assets/img/treinador.png') }}" alt="img">
+                    </div>
+                    <div class="team-card_content">
+                        <h4 class="team-card_title"><a href="team-details.html">Oliver Samuel</a>
+                        </h4>
+                        <span class="team-card_desig">CEO/Founder</span>
+                        <div class="social-btn">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.discord.com/"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-card">
+                    <div class="team-card_img">
+                        <img src="{{ asset('assets/img/treinador2.png') }}" alt="img">
+                    </div>
+                    <div class="team-card_content">
+                        <h4 class="team-card_title"><a href="team-details.html">George Thomas</a>
+                        </h4>
+                        <span class="team-card_desig">CEO/Founder</span>
+                        <div class="social-btn">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.discord.com/"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-card">
+                    <div class="team-card_img">
+                        <img src="{{ asset ('assets/img/treinador3.png') }}" alt="img">
+                    </div>
+                    <div class="team-card_content">
+                        <h4 class="team-card_title"><a href="team-details.html">Mike Johnson</a>
+                        </h4>
+                        <span class="team-card_desig">CEO/Founder</span>
+                        <div class="social-btn">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.discord.com/"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-card">
+                    <div class="team-card_img">
+                        <img src="{{ asset('assets/img/treinadora.png') }}" alt="img">
+                    </div>
+                    <div class="team-card_content">
+                        <h4 class="team-card_title"><a href="team-details.html">Amelia Harper</a>
+                        </h4>
+                        <span class="team-card_desig">CEO/Founder</span>
+                        <div class="social-btn">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.discord.com/"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-card">
+                    <div class="team-card_img">
+                        <img src="{{ asset('assets/img/treinador.png') }}" alt="img">
+                    </div>
+                    <div class="team-card_content">
+                        <h4 class="team-card_title"><a href="team-details.html">Oliver Samuel</a>
+                        </h4>
+                        <span class="team-card_desig">CEO/Founder</span>
+                        <div class="social-btn">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.discord.com/"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 
 <!--==============================
 Goal Area
@@ -1717,10 +1481,10 @@ Pricing plan Area
             <div class="col-lg-4 col-md-6">
                 <div class="pricing-card">
                     <div class="pricing-card_bg">
-                        <img src="assets/img/bg/pricing-card1-bg.png" alt="img">
+                        <img src="{{ asset('assets/img/bg/pricing-card1-bg.png') }}" alt="img">
                     </div>
                     <div class="pricing-card_icon">
-                        <img src="assets/img/icon/picing-icon_1-1.svg" alt="img">
+                        <img src="{{ asset('assets/img/icon/picing-icon_1-1.svg') }}" alt="img">
                     </div>
                     <h3 class="pricing-card_title">Basic Membership</h3>
                     <h4 class="pricing-card_price"><span class="currency">$</span>19<span class="duration">/month</span>
@@ -1740,10 +1504,10 @@ Pricing plan Area
             <div class="col-lg-4 col-md-6">
                 <div class="pricing-card pricing-card_active">
                     <div class="pricing-card_bg">
-                        <img src="assets/img/bg/pricing-card1-bg.png" alt="img">
+                        <img src="{{ asset('assets/img/bg/pricing-card1-bg.png') }}" alt="img">
                     </div>
                     <div class="pricing-card_icon">
-                        <img src="assets/img/icon/picing-icon_1-2.svg" alt="img">
+                        <img src="{{ asset('assets/img/icon/picing-icon_1-2.svg') }}" alt="img">
                     </div>
                     <h3 class="pricing-card_title">Standard Membeship</h3>
                     <h4 class="pricing-card_price"><span class="currency">$</span>39<span class="duration">/month</span>
@@ -1763,10 +1527,10 @@ Pricing plan Area
             <div class="col-lg-4 col-md-6">
                 <div class="pricing-card">
                     <div class="pricing-card_bg">
-                        <img src="assets/img/bg/pricing-card1-bg.png" alt="img">
+                        <img src="{{ asset('assets/img/bg/pricing-card1-bg.png') }}" alt="img">
                     </div>
                     <div class="pricing-card_icon">
-                        <img src="assets/img/icon/picing-icon_1-3.svg" alt="img">
+                        <img src="{{ asset('assets/img/icon/picing-icon_1-3.svg') }}" alt="img">
                     </div>
                     <h3 class="pricing-card_title">Ultimate Membership</h3>
                     <h4 class="pricing-card_price"><span class="currency">$</span>69<span class="duration">/month</span>
@@ -1786,177 +1550,13 @@ Pricing plan Area
         </div>
     </div>
 </div>
-<!--==============================
-    Footer Area
-==============================-->
-<footer class="footer-wrapper footer-layout1" data-bg-src="{{ asset('assets/img/bg/footer-1-bg.png') }}">
-    <div class="container">
-        <div class="widget-area">
-            <div class="row justify-content-between">
-                <div class="col-md-6 col-xl-3">
-                    <div class="widget footer-widget">
-                        <div class="widget-about">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="{{ asset('assets/img/logoVivaBem.svg') }}" alt="VivaBem"></a>
-                            </div>
-                            <p class="about-text">Uma academia, também conhecida como centro de fitness ou clube de saúde, é uma instalação dedicada à preparação física e academias de ginástica e normalmente oferece uma variedade</p>
-                            <div class="social-btn">
-                                <a href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                <a href="https://linkedin.com/" tabindex="0"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.discord.com/" tabindex="0"><i class="fab fa-discord"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget widget_nav_menu footer-widget">
-                        <h3 class="widget_title">Links Rápidos</h3>
-                        <div class="menu-all-pages-container">
-                            <ul class="menu">
-                                <li><a href="about.html">Home</a></li>
-                                <li><a href="service-details.html">Sobre</a></li>
-                                <li><a href="team.html">Modalidades</a></li>
-                                <li><a href="project.html">Treino</a></li>
-                                <li><a href="project.html">Noticias</a></li>
-                                <li><a href="contact.html">Contato</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget footer-widget">
-                        <h3 class="widget_title">Galeria</h3>
-                        <div class="sidebar-gallery">
-                            <div class="gallery-thumb">
-                                <img src="{{ asset('assets/img/instagram/feed1.png') }}" alt="Gallery Image">
-                                <a href="{{ asset('assets/img/widget/insta-feed1.png') }}" class="gallery-btn popup-image"><i class="fab fa-instagram"></i></a>
-                            </div>
-                            <div class="gallery-thumb">
-                                <img src="{{ asset ('assets/img/instagram/feed2.png') }}" alt="Gallery Image">
-                                <a href="{{ asset('assets/img/widget/insta-feed2.png') }}" class="gallery-btn popup-image"><i class="fab fa-instagram"></i></a>
-                            </div>
-                            <div class="gallery-thumb">
-                                <img src="{{asset ('assets/img/instagram/feed3.png') }}" alt="Gallery Image">
-                                <a href="{{ asset('assets/img/widget/insta-feed3.png') }}" class="gallery-btn popup-image"><i class="fab fa-instagram"></i></a>
-                            </div>
-                            <div class="gallery-thumb">
-                                <img src="{{ asset('assets/img/instagram/feed4.png')  }}" alt="Gallery Image">
-                                <a href="{{ asset ('assets/img/widget/insta-feed4.png')}}" class="gallery-btn popup-image"><i class="fab fa-instagram"></i></a>
-                            </div>
-                            <div class="gallery-thumb">
-                                <img src="{{ asset ('assets/img/instagram/feed5.png') }}" alt="Gallery Image">
-                                <a href="{{ asset('assets/img/widget/insta-feed5.png') }}" class="gallery-btn popup-image"><i class="fab fa-instagram"></i></a>
-                            </div>
-                            <div class="gallery-thumb">
-                                <img src="{{ asset('assets/img/instagram/feed6.png') }}" alt="Gallery Image">
-                                <a href="{{ asset('assets/img/widget/insta-feed6.png') }}" class="gallery-btn popup-image"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3">
-                    <div class="widget footer-widget">
-                        <h3 class="widget_title">Receba boletim informativo</h3>
-                        <p class="footer-text">Ganhe 10% de desconto no seu primeiro pedido! Se apresse</p>
-                        <form class="newsletter-form">
-                            <div class="form-group">
-                                <i class="far fa-envelope"></i>
-                                <input class="form-control" type="email" placeholder="Email Address" required="">
-                            </div>
-                            <button type="submit" class="btn style-r0 style2">Se inscrever</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="preloader ">
-        <div class="preloader-inner">
-            <span class="loader"></span>
-        </div>
-    </div>
-    <div class="popup-search-box">
-        <button class="searchClose"><i class="fal fa-times"></i></button>
-        <form action="#">
-            <input type="text" placeholder="Search Here..">
-            <button type="submit"><i class="fal fa-search"></i></button>
-        </form>
-    </div>
-    <div class="sidemenu-wrapper">
-        <div class="sidemenu-content">
-            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-            <div class="widget footer-widget">
-                <div class="widget-about">
-                    <div class="footer-logo">
-                        <a href="index.html"><img src="{{ asset('assets/img/logoVivaBem.svg') }}" alt="VivaBem"></a>
-                    </div>
-                    <p class="about-text">Uma academia, também conhecida como centro de fitness ou clube de saúde, é uma instalação dedicada à preparação física e academias de ginástica e normalmente oferece uma variedade</p>
-                    <div class="social-btn">
-                        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                        <a href="https://pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="widget widget_nav_menu footer-widget">
-                <h3 class="widget_title">Quick Links</h3>
-                <ul class="menu">
-                    <li><a href="about.html">Sobre</a></li>
-                    <li><a href="project-details.html">Our Mission</a></li>
-                    <li><a href="team.html">Meet The Teams</a></li>
-                    <li><a href="project.html">Our Projects</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="copyright-wrap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2023 <a href="#">Fitmas.</a> All Rights Reserved.</p></div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-<div class="scroll-top">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
-    </svg>
-</div>
 
 
 
-<script src="{{ asset ('assets/js/vendor/jquery-3.6.0.min.js')}}"></script>
-
-<script src="{{ asset ('assets/js/slick.min.js') }}"></script>
-
-<script src="{{ asset ('assets/js/bootstrap.min.js') }}"></script>
-
-<script src="{{ asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
-
-<script src="{{ asset ('assets/js/jquery.counterup.min.js')}}"></script>
-
-<script src="{{ asset ('assets/js/jquery-ui.min.js')}}"></script>
-
-<script src="{{asset  ('assets/js/jquery.flipster.min.js')}}"></script>
-
-<script src="{{ asset ('assets/js/imagesloaded.pkgd.min.js') }}"></script>
-
-<script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
-
-<script src="{{ asset ('assets/js/bmi.calculator.js')}}"></script>
-
-
-<script src=" {{ asset ('assets/js/main.js') }}"></script>
 </body>
 
-</html>
 
-@section('conteudo')
+
 
 @endsection
 
