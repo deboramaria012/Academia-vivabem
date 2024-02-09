@@ -1,14 +1,20 @@
 <?php
 
+use App\Http\Controllers\administradorController;
 use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\ContatoDoController;
 use App\Http\Controllers\HomeDoController;
+use App\Http\Controllers\instrutorController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ModalidadeDoController;
 use App\Http\Controllers\NoticiasDoController;
 use App\Http\Controllers\NoticiasoDoController;
 use App\Http\Controllers\SobreDoController;
 use App\Http\Controllers\TreinoDoController;
+use App\Http\Middleware\AutAcademiaMiddle;
+use App\Http\Middleware\LogAcessoAcademia;
+use App\Models\Aluno;
+use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,13 +46,32 @@ Route::get('/login',[LoginController::class,'index'])->name('login');
 route::post('/login', [LoginController::class, 'autenticar'])->name('login');
 
 
-Route::get('/dashboard/aluno/aluno',[AlunoController::class,'aluno'])->name('dashboard.aluno');
-Route::get('/dashboard/instrutor/instrutor',[AlunoController::class,'instrutor'])->name('dashboard.instrutor');
-Route::get('/dashboard/administrador/administrador',[AlunoController::class,'administrador'])->name('dashboard.administrativo');
+Route::middleware(['autenticacao:aluno'])->group(function (){
+
+  Route::get('/dashboard/aluno/aluno',[AlunoController::class,'aluno'])->name('dashboard.aluno');
+});
 
 
-Route::get('/contato',[ContatoDoController::class, 'index'])->name('contato'); // Página Contato"
+
+Route::middleware(['autenticacao:instrutor'])->group(function (){
+
+ Route::get('/dashboard/instrutor/instrutor',[instrutorController::class,'instrutor'])->name('dashboard.instrutor');
+});
+
+
+Route::middleware(['autenticacao:administrativo'])->group(function (){
+
+  Route::get('/dashboard/administrador/administrador',[administradorController::class,'administrador'])->name('dashboard.administrativo');
+});
+
+Route::get('/contato',[ContatoDoController::class,'index'])->name('contato');
+
 Route::post('contato/enviar',[ContatoDoController::class, 'salvarNoBanco'])->name('contato.enviar');
 Route::post('/contato/enviarNew',[ContatoDoController::class, 'salvarEmail'])->name('contato.enviarNew');
+
+Route::get('/sair',function(){
+  session()->flush();
+  return redirect('/');
+})->name('sair');
 
 

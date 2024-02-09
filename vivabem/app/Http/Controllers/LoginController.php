@@ -53,16 +53,63 @@ class LoginController extends Controller
         // dd($usuario);
 
         $tipoUsuario = $usuario->tipo_usuario;
+        $tipo = null;
         // dd($tipoUsuario);
 
         if($tipoUsuario instanceof Aluno){
-            dd($tipoUsuario);
+            $tipo = 'aluno';
+
+            //dd($tipoUsuario);//
+
+
+            session([
+                'id'    =>           $tipoUsuario->idAlunoo,
+                'nome'  =>           $tipoUsuario->nomeAlunoo,
+                'tipo_usuario' =>   'aluno',
+                'email' =>          $tipoUsuario->emailAlunoo,
+
+            ]);
+
+
+            return redirect()->route('dashboard.aluno');
+
 
         }elseif($tipoUsuario instanceof Funcionario){
-            dd($tipoUsuario);
-        }else{
-            dd('Cheguei aqui');
+
+        if($tipoUsuario->tipoFuncionario == 'instrutor'){
+            $tipo = 'instrutor';
+            session([
+                'id'    =>           $tipoUsuario->idFuncionario,
+                'nome'  =>           $tipoUsuario->nomeFuncionario,
+                'tipoFuncionario' => $tipoUsuario->tipoFuncionario,
+                'email' =>           $tipoUsuario->emailfuncionario,
+
+            ]);
+
+            return redirect()->route('dashboard.instrutor');
+
+
+         }elseif($tipoUsuario->tipoFuncionario == 'administrativo'){
+            $tipo= 'administrativo';
+            session([
+                'id'    =>           $tipoUsuario->idFuncionario,
+                'nome'  =>           $tipoUsuario->nomeFuncionario,
+                'tipoFuncionario' => $tipoUsuario->tipoFuncionario,
+                'email' =>           $tipoUsuario->emailfuncionario,
+
+
+            ]);
+
+            return redirect()->route('dashboard.administrativo');
+
+
         }
+     }
+
+        return back()->withErrors(['email' =>'Erro desconhecido de autentificação']);
+
+
+
     }
 
     }

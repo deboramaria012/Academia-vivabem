@@ -17,6 +17,6 @@ class Usuario extends Model
     public function tipo_usuario(){
         return $this->morphTo('tipo_usuario', 'tipo_usuario_type', 'tipo_usuario_id');
 
-        // os ultimos tipo é de acordo com o nome do banco
+        // 
     }
 }
