@@ -1,5 +1,9 @@
+@extends('layout.layout')
+
+@section('dashboard.aluno')
 
 <link rel="stylesheet" href="{{ asset ('assets/css/estilodash.css') }}">
+
 
 <main>
     <nav class="main-menu">
@@ -96,6 +100,3 @@
         </div>
     </section>
 </main>
-
-
-

@@ -64,6 +64,8 @@ Route::middleware(['autenticacao:administrativo'])->group(function (){
   Route::get('/dashboard/administrador/administrador',[administradorController::class,'administrador'])->name('dashboard.administrativo');
 });
 
+
+
 Route::get('/contato',[ContatoDoController::class,'index'])->name('contato');
 
 Route::post('contato/enviar',[ContatoDoController::class, 'salvarNoBanco'])->name('contato.enviar');
